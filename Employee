@@ -1,0 +1,32 @@
+package utspbo;
+
+public class Employee {
+    String name = "";
+    String department = "";
+    String position = "";
+    int idNumber = 0; 
+    
+    public Employee( String name, String department, String position, int idNumber){
+        this.name = name; 
+        this.department = department;
+        this.position = position;
+        this.idNumber = idNumber;
+    }
+    
+    public Employee (String name, int idNumber){
+        this.name = name;
+        this.idNumber = idNumber;
+    }
+   
+    public static void main(String[] args) {
+        Employee employee1 = new Employee ("Susan Meyers", "Accounting", "Vice President", 47899);
+        Employee employee2 = new Employee ("Mark Jones", "IT", "Proggramer", 39119);
+        Employee employee3 = new Employee ("Joy Rogers", "Manufacturing", "Engineer", 81774);
+        
+        System.out.println("Name\t\t\tIdNumber\tDepartment\tPosition");
+        System.out.println("======================================================================");
+        System.out.println(employee1.name+"\t\t"+employee1.idNumber+"\t\t"+employee1.department+"\t"+employee1.position);
+        System.out.println(employee2.name+"\t\t"+employee2.idNumber+"\t\t"+employee2.department+"\t\t"+employee2.position);
+        System.out.println(employee3.name+"\t\t"+employee3.idNumber+"\t\t"+employee3.department+"\t"+employee3.position);
+    }
+}
